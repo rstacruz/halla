@@ -1,4 +1,13 @@
 {
   "name": "hola",
-  "main": "index.html"
+  "main": "index.html",
+  "devDependencies": {
+    "rc": "1.1.6"
+  },
+  "dependencies": {
+    "101": "1.6.1",
+    "decca": "2.1.0",
+    "redux": "3.5.2",
+    "redux-thunk": "2.1.0"
+  }
 }
