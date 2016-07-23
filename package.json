@@ -5,6 +5,9 @@
     "rc": "1.1.6",
     "tape": "4.6.0"
   },
+  "scripts": {
+    "start": "nw"
+  },
   "dependencies": {
     "101": "1.6.1",
     "classnames": "2.2.5",

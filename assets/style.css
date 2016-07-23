@@ -5,6 +5,10 @@ html, body, #app {
   overflow: hidden;
 }
 
+*:focus {
+  outline: 0;
+}
+
 iframe, webview {
   height: 100%;
   width: 100%;
@@ -26,7 +30,7 @@ iframe, webview {
 
 .chrome-root > .sidebar {
   flex: 0 0 64px;
-  background: #333;
+  background: #10181d;
   height: 100%;
 }
 
@@ -71,11 +75,22 @@ iframe, webview {
 .service-item {
   display: block;
   position: relative;
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.service-item > .icon {
+  display: block;
+  position: relative;
 
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: transparent;
   border-radius: 3px;
   text-align: center;
   overflow: hidden;
@@ -85,14 +100,10 @@ iframe, webview {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: white;
-
-  border: 0;
-  padding: 0;
-  cursor: pointer;
 }
 
-.service-item > .name,
-.service-item > .image {
+.service-item > .icon > .name,
+.service-item > .icon > .image {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,12 +111,13 @@ iframe, webview {
   height: 100%;
 }
 
-.service-item > .name {
+.service-item > .icon > .name {
   z-index: 1;
   background: rgba(255, 255, 255, .1);
 }
 
-.service-item > .image {
+.service-item > .icon > .image {
+  border: 0;
   z-index: 2;
 }
 
@@ -130,20 +142,18 @@ iframe, webview {
   background: red;
 }
 
-.service-item {
+.service-item > .icon {
   opacity: .25;
 }
 
-.service-item:hover,
-.service-item:focus {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, .2);
-  outline: 0;
+.service-item:hover > .icon,
+.service-item:focus > .icon {
   opacity: .5;
 }
 
-.service-item.-active,
-.service-item.-active:hover,
-.service-item.-active:focus {
+.service-item.-active > .icon,
+.service-item.-active:hover > .icon,
+.service-item.-active:focus > .icon {
   opacity: 1;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 3px 1px dodgerblue;
 }
