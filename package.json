@@ -12,7 +12,6 @@
     "nwb_opts": "--mac-icns assets/halla.icns"
   },
   "dependencies": {
-    "101": "1.6.1",
     "classnames": "2.2.5",
     "decca": "2.1.0",
     "lodash": "4.13.1",
