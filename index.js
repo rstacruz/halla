@@ -13,6 +13,14 @@ window.Store = store
 store.dispatch(actions.loadConfig())
 
 /*
+ * Ticker
+ */
+
+setInterval(() => {
+  store.dispatch({ type: 'tick', time: Date.now() })
+}, 1000)
+
+/*
  * Builds the renderer
  */
 
