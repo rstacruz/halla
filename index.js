@@ -19,7 +19,6 @@ store.dispatch(actions.loadConfig())
 !(function tick () {
   store.dispatch({ type: 'tick', time: Date.now() })
   setTimeout(() => {
-    window.requestAnimationFrame &&
     window.requestAnimationFrame(tick)
   }, 1000)
 }())
