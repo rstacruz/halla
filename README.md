@@ -16,6 +16,7 @@ url = https://myteam.slack.com
 
 ```sh
 npm start
+npm run start:sdk  # runs with sdk version (inspect element, etc)
 ```
 
 ## Packaging
