@@ -1,11 +1,11 @@
-# Hola
+# Halla
 
 > Minimal Slack wrapper
 
 ## Config
 
 ```
-; ~/.holarc
+; ~/.hallarc
 
 [services.myteam]
 name = My Slack
