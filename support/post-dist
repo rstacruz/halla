@@ -2,6 +2,6 @@
 # Ran after `npm run dist`
 VERSION=$(node -e 'console.log(require("./package.json").version)')
 
-cd dist/halla-osx-x64
+cd dist/Halla-osx-x64
 zip -9 ../halla-osx-${VERSION}.zip *.app credits.html
 

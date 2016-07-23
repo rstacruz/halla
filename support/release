@@ -2,9 +2,20 @@
 REPO=rstacruz/halla
 VERSION=$(node -e 'console.log(require("./package.json").version)')
 
+curl --data '{
+  "tag_name": "v${VERSION}",
+  "target_commitish": "master",
+  "name": "v${VERSION}",
+  "body": "Release of version ${VERSION}",
+  "draft": false,
+  "prerelease": false
+}' \
+  -H "Authorization:token $GITHUB_TOKEN" \
+  https://api.github.com/repos/${REPO}/releases
+
 curl \
   -XPOST \
   -H "Authorization:token $GITHUB_TOKEN" \
   -H "Content-Type:application/octet-stream" \
-  --data-binary @yourbinary.exe \
+  --data-binary @dist/halla-osx-${VERSION}.zip \
   https://uploads.github.com/repos/${REPO}/releases/${VERSION}/assets?name=yourbinary.exe
