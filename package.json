@@ -8,8 +8,8 @@
     "tape": "4.6.0"
   },
   "scripts": {
-    "prepublish": "nwb download $npm_package_config_nwjs_version",
-    "start": "nwb nwbuild -v $npm_package_config_nwjs_version -r .",
+    "prepublish": "nwb download ${npm_package_config_nwjs_version}-sdk",
+    "start": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk -r .",
     "dist": "nwb nwbuild -v $npm_package_config_nwjs_version -p osx64 -o dist"
   },
   "dependencies": {
