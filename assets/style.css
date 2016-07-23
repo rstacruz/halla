@@ -52,3 +52,53 @@ iframe, webview {
   top: 0;
   left: 0;
 }
+
+/*
+ * Service item:
+ * sidebar thing
+ */
+
+.service-list {
+  padding: 8px;
+}
+
+.service-list > .item {
+  margin: 0 auto;
+}
+
+.service-list > .item + .item {
+  margin-top: 8px;
+}
+
+.service-item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  color: white;
+
+  border: solid 2px transparent;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.service-item:hover,
+.service-item:focus {
+  background: rgba(255, 255, 255, .2);
+  outline: 0;
+}
+
+.service-item.-active,
+.service-item.-active:hover,
+.service-item.-active:focus {
+  border: solid 2px dodgerblue;
+  background: rgba(255, 255, 255, .3);
+}
