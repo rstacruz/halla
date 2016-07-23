@@ -1,15 +1,15 @@
 {
   "name": "Halla",
+  "description": "Minimal Slack wrapper app",
   "version": "0.0.1",
-  "main": "index.html",
-  "devDependencies": {
-    "tape": "4.6.0"
+  "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
+  "bugs": {
+    "url": "https://github.com/rstacruz/halla/issues"
   },
-  "scripts": {
-    "start": "nwb nwbuild -v ${npm_package_config_nwjs_version} ${npm_package_config_nwb_opts} -r .",
-    "start:sdk": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk ${npm_package_config_nwb_opts} -r .",
-    "dist": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist && ./support/post-dist",
-    "test": "tape test/*.js"
+  "chromium-args": "--mixed-context",
+  "config": {
+    "nwjs_version": "0.16.0",
+    "nwb_opts": "--mac-icns assets/halla.icns"
   },
   "dependencies": {
     "101": "1.6.1",
@@ -21,9 +21,28 @@
     "redux": "3.5.2",
     "redux-thunk": "2.1.0"
   },
-  "chromium-args": "--mixed-context",
-  "config": {
-    "nwjs_version": "0.16.0",
-    "nwb_opts": "--mac-icns assets/halla.icns"
+  "devDependencies": {
+    "tape": "4.6.0"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "homepage": "https://github.com/rstacruz/halla#readme",
+  "keywords": [
+    "slack",
+    "ssb"
+  ],
+  "license": "MIT",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/halla.git"
+  },
+  "scripts": {
+    "dist": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist && ./support/post-dist",
+    "start": "nwb nwbuild -v ${npm_package_config_nwjs_version} ${npm_package_config_nwb_opts} -r .",
+    "start:sdk": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk ${npm_package_config_nwb_opts} -r .",
+    "test": "tape test/*.js"
   }
 }
