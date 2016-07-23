@@ -1,21 +1,26 @@
 #!/usr/bin/env bash
-REPO=rstacruz/halla
 VERSION=$(node -e 'console.log(require("./package.json").version)')
 
-curl --data '{
-  "tag_name": "v${VERSION}",
-  "target_commitish": "master",
-  "name": "v${VERSION}",
-  "body": "Release of version ${VERSION}",
-  "draft": false,
-  "prerelease": false
-}' \
-  -H "Authorization:token $GITHUB_TOKEN" \
-  https://api.github.com/repos/${REPO}/releases
+if ! which github-release 2>&1 >/dev/null; then
+  echo "You need github-release"
+  echo "See: https://github.com/aktau/github-release"
+  exit 1
+fi
 
-curl \
-  -XPOST \
-  -H "Authorization:token $GITHUB_TOKEN" \
-  -H "Content-Type:application/octet-stream" \
-  --data-binary @dist/halla-osx-${VERSION}.zip \
-  https://uploads.github.com/repos/${REPO}/releases/${VERSION}/assets?name=yourbinary.exe
+echo "* Creating GitHub release..."
+github-release -v release \
+  --user rstacruz \
+  --repo halla \
+  --tag "v${VERSION}" \
+  --name "v${VERSION}"
+
+echo "* Uploading artifacts:"
+for fn in release/*; do
+  echo "  $fn..."
+  github-release -v upload \
+    --user rstacruz \
+    --repo halla \
+    --tag "v${VERSION}" \
+    --name $(basename $(echo $fn)) \
+    --file "$fn"
+done

@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
-# Ran after `npm run dist`
+# Ran after `npm run dist`. Builds `releases/` which will be automatically
+# deployed to GitHub.
+
 VERSION=$(node -e 'console.log(require("./package.json").version)')
 
-cd dist/Halla-osx-x64
-zip -9 ../halla-osx-${VERSION}.zip *.app credits.html
+rm -rf release
+mkdir release
 
+cd dist/Halla-osx-x64
+zip -9r ../../release/halla-osx-${VERSION}.zip *.app credits.html
+cd -
+
+echo ""
+find release
