@@ -8,7 +8,7 @@ if ! which github-release 2>&1 >/dev/null; then
 fi
 
 echo "* Creating GitHub release..."
-github-release -v release \
+github-release release \
   --user rstacruz \
   --repo halla \
   --tag "v${VERSION}" \
@@ -17,7 +17,7 @@ github-release -v release \
 echo "* Uploading artifacts:"
 for fn in release/*; do
   echo "  $fn..."
-  github-release -v upload \
+  github-release upload \
     --user rstacruz \
     --repo halla \
     --tag "v${VERSION}" \

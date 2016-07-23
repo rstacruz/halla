@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "main": "index.html",
   "devDependencies": {
-    "nwjs-builder": "1.13.1",
-    "rc": "1.1.6",
     "tape": "4.6.0"
   },
   "scripts": {
@@ -19,6 +17,7 @@
     "decca": "2.1.0",
     "lodash": "4.13.1",
     "nwjs-builder": "1.13.1",
+    "rc": "1.1.6",
     "redux": "3.5.2",
     "redux-thunk": "2.1.0"
   },
