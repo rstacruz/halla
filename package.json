@@ -2,11 +2,14 @@
   "name": "hola",
   "main": "index.html",
   "devDependencies": {
-    "rc": "1.1.6"
+    "rc": "1.1.6",
+    "tape": "4.6.0"
   },
   "dependencies": {
     "101": "1.6.1",
+    "classnames": "2.2.5",
     "decca": "2.1.0",
+    "lodash": "4.13.1",
     "redux": "3.5.2",
     "redux-thunk": "2.1.0"
   }

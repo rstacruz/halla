@@ -5,7 +5,7 @@ html, body, #app {
   overflow: hidden;
 }
 
-webview {
+iframe, webview {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -33,4 +33,22 @@ webview {
 .chrome-root > .body {
   flex: 1 1 100%;
   height: 100%;
+  position: relative;
+}
+
+/*
+ * Service body
+ */
+
+.service-body {
+  position: absolute;
+  top: -100vh;
+  left: -100vw;
+  height: 100%;
+  width: 100%;
+}
+
+.service-body.-active {
+  top: 0;
+  left: 0;
 }
