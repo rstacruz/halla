@@ -24,6 +24,12 @@ url = https://myteam.slack.com
 
 ## Starting
 
+```sh
+git clone https://github.com/rstacruz/halla.git
+cd halla
+npm install
+```
+
 Run it with `npm start`. Note that it'll download nw.js on its first run (pretty big).
 
 ```sh
