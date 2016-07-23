@@ -16,9 +16,12 @@ store.dispatch(actions.loadConfig())
  * Ticker
  */
 
-setInterval(() => {
+!(function tick () {
   store.dispatch({ type: 'tick', time: Date.now() })
-}, 1000)
+  setTimeout(() => {
+    window.requestAnimationFrame(tick)
+  }, 1000)
+}())
 
 /*
  * Builds the renderer
