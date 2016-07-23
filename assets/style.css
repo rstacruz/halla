@@ -143,12 +143,12 @@ iframe, webview {
 }
 
 .service-item > .icon {
-  opacity: .25;
+  opacity: .5;
 }
 
 .service-item:hover > .icon,
 .service-item:focus > .icon {
-  opacity: .5;
+  opacity: .75;
 }
 
 .service-item.-active > .icon,

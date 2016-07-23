@@ -2,11 +2,13 @@
   "name": "hola",
   "main": "index.html",
   "devDependencies": {
+    "nwjs-builder": "1.13.1",
     "rc": "1.1.6",
     "tape": "4.6.0"
   },
   "scripts": {
-    "start": "nw"
+    "prepublish": "nwb download $npm_package_config_nwjs_version",
+    "start": "nwb nwbuild -v $npm_package_config_nwjs_version -r ."
   },
   "dependencies": {
     "101": "1.6.1",
@@ -16,5 +18,8 @@
     "redux": "3.5.2",
     "redux-thunk": "2.1.0"
   },
-  "chromium-args": "--mixed-context"
+  "chromium-args": "--mixed-context",
+  "config": {
+    "nwjs_version": "0.16.0"
+  }
 }
