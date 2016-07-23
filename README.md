@@ -2,9 +2,9 @@
 
 > Minimal Slack wrapper app
 
-Halla is yet another "native" app for accessing your Slack teams. It tries to be more conservative with resources.
+![](docs/images/screenshot.png)
 
-Halla is built on [nw.js], which takes less resources than [Electron][] (most other wrapper apps) or [MacGap][] (Slack official app).
+Halla is yet another "native" app for accessing your Slack teams. It tries to be more conservative with resources. Halla is built on [nw.js], which takes less resources than [Electron][] (most other wrapper apps) or [MacGap][] (Slack official app).
 
 Halla is a work-in-progress; sorry, no downloads available yet, but there will be soon!
 
