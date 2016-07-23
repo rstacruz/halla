@@ -25,7 +25,7 @@ iframe, webview {
 }
 
 .chrome-root > .sidebar {
-  flex: 0 0 80px;
+  flex: 0 0 64px;
   background: #333;
   height: 100%;
 }
@@ -61,7 +61,6 @@ iframe, webview {
  */
 
 .service-list {
-  padding: 8px 0;
 }
 
 .service-list > .item {
@@ -147,11 +146,4 @@ iframe, webview {
 .service-item.-active:focus {
   opacity: 1;
   box-shadow: 0 0 0 2px #fff;
-}
-
-/* Rounded */
-.service-item,
-.service-item > .name,
-.service-item > .image {
-  border-radius: 50%;
 }
