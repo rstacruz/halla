@@ -6,7 +6,7 @@
   "bugs": {
     "url": "https://github.com/rstacruz/halla/issues"
   },
-  "chromium-args": "--mixed-context",
+  "chromium-args": "--mixed-context --enable-logging=stderr",
   "config": {
     "nwjs_version": "0.16.0",
     "nwb_opts": "--mac-icns assets/halla.icns"
@@ -16,6 +16,7 @@
     "decca": "2.1.0",
     "lodash": "4.13.1",
     "nwjs-builder": "1.13.1",
+    "open": "0.0.5",
     "rc": "1.1.6",
     "redux": "3.5.2",
     "redux-thunk": "2.1.0"

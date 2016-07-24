@@ -2,37 +2,39 @@ const buildStore = require('./lib/store')
 const actions = require('./lib/actions')
 const dom = require('decca').dom
 const h = require('decca').element
+
 const Chrome = require('./lib/components/chrome')
+const FrameDecorator = require('./lib/middleware/frame_decorator')
 
-/*
- * Builds the store
- */
+start()
 
-const store = buildStore()
-window.Store = store
-store.dispatch(actions.loadConfig())
+function start () {
+  const store = buildStore([FrameDecorator()])
+  window.Store = store
+
+  startTicker(store)
+  store.dispatch(actions.loadConfig())
+
+  const render = dom.createRenderer(document.getElementById('app'), store.dispatch)
+
+  function update () {
+    const state = store.getState()
+    render(h(Chrome, {state: state}))
+  }
+
+  store.subscribe(update)
+  update()
+}
 
 /*
  * Ticker
  */
 
-!(function tick () {
-  store.dispatch({ type: 'tick', time: Date.now() })
-  setTimeout(() => {
-    window.requestAnimationFrame(tick)
-  }, 1000)
-}())
-
-/*
- * Builds the renderer
- */
-
-const render = dom.createRenderer(document.getElementById('app'), store.dispatch)
-
-function update () {
-  const state = store.getState()
-  render(h(Chrome, {state: state}))
+function startTicker (store) {
+  !(function tick () {
+    store.dispatch({ type: 'tick', time: Date.now() })
+    setTimeout(() => {
+      window.requestAnimationFrame(tick)
+    }, 1000)
+  }())
 }
-
-store.subscribe(update)
-update()
