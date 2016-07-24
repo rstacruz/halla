@@ -21,6 +21,7 @@
     "redux-thunk": "2.1.0"
   },
   "devDependencies": {
+    "ava": "0.15.2",
     "tape": "4.6.0"
   },
   "directories": {
