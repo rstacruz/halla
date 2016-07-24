@@ -6,7 +6,7 @@
 
 Halla is yet another "native" app for accessing your Slack teams. It tries to be more conservative with resources. Halla is built on [nw.js], which takes less resources than [Electron][] (most other wrapper apps) or [MacGap][] (Slack official app).
 
-Halla is a work-in-progress; sorry, no downloads available yet, but there will be soon!
+**[Download Halla →](https://github.com/rstacruz/halla/releases)**
 
 [nw.js]: http://nwjs.io/
 [Electron]: http://electron.atom.io/
@@ -20,6 +20,10 @@ Create a file called `~/.hallarc`. Add as many Slack teams here.
 [services.myteam]
 name = My Slack
 url = https://myteam.slack.com
+
+[services.otherteam]
+name = Their Slack
+url = https://otherteam.slack.com
 ```
 
 ## Starting
