@@ -8,7 +8,7 @@ rm -rf release
 mkdir release
 
 cd dist/Halla-osx-x64
-zip -9r ../../release/halla-osx-${VERSION}.zip *.app credits.html
+zip -9r ../../release/halla-osx.zip *.app credits.html
 cd -
 
 echo ""

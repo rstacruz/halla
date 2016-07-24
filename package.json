@@ -41,8 +41,7 @@
     "url": "git+https://github.com/rstacruz/halla.git"
   },
   "scripts": {
-    "dist": "npm run dist:start && ./support/post-dist",
-    "dist:start": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
+    "dist": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
     "start": "nwb nwbuild -v ${npm_package_config_nwjs_version} ${npm_package_config_nwb_opts} -r .",
     "start:sdk": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk ${npm_package_config_nwb_opts} -r .",
     "test": "tape test/*.js"

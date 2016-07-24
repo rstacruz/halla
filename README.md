@@ -8,6 +8,8 @@ Halla is yet another "native" app for accessing your Slack teams. It tries to be
 
 **[Download Halla →](https://github.com/rstacruz/halla/releases)**
 
+[![Status](https://travis-ci.org/rstacruz/halla.svg?branch=master)](https://travis-ci.org/rstacruz/halla "See test builds")
+
 [nw.js]: http://nwjs.io/
 [Electron]: http://electron.atom.io/
 [MacGap]: https://macgapproject.github.io/
