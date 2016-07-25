@@ -45,5 +45,10 @@
     "start": "nwb nwbuild -v ${npm_package_config_nwjs_version} ${npm_package_config_nwb_opts} -r .",
     "start:sdk": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk ${npm_package_config_nwb_opts} -r .",
     "test": "tape test/*.js"
+  },
+  "window": {
+    "width": 1024,
+    "height": 600,
+    "title": "Halla"
   }
 }
