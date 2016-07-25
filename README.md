@@ -40,7 +40,7 @@ url = https://messenger.com
 ### Under the hood
 
 - [nw.js](http://nwjs.io/) for the native wrapping
-- [nwb](https://www.npmjs.com/package/nwb) to simplify management of different nw.js versions
+- [nwjs-builder](https://www.npmjs.com/package/nwjs-builder) to simplify management of different nw.js versions
 - [Decca](https://ricostacruz.com/decca) for virtual DOM
 - [Brunch.io](http://brunch.io/) + Sass + Autoprefixer for CSS
 
