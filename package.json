@@ -15,6 +15,7 @@
     "classnames": "2.2.5",
     "decca": "2.1.0",
     "lodash": "4.13.1",
+    "normalize.css": "4.2.0",
     "nwjs-builder": "1.13.1",
     "open": "0.0.5",
     "rc": "1.1.6",
