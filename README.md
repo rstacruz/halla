@@ -35,7 +35,20 @@ url = https://messenger.com
 ## Developer setup
 
 <details>
-<summary>*Show developer instructions...*</summary>
+<summary>*Show developer info...*</summary>
+
+### Under the hood
+
+- [nw.js](http://nwjs.io/) for the native wrapping
+- [nwb](https://www.npmjs.com/package/nwb) to simplify management of different nw.js versions
+- [Decca](https://ricostacruz.com/decca) for virtual DOM
+- [Brunch.io](http://brunch.io/) + Sass + Autoprefixer for CSS
+
+A few notes on how it's put together:
+
+- There's no JS transpilation. This means no JSX (a bit painful, but you'll get used to it!).
+- No Gulp, Grunt or whatnot--just plain npm scripts with [npm-run-all](https://www.npmjs.com/package/npm-run-all).
+- nw.js is in `--mixed-context` mode to make things a bit simpler.
 
 ### Starting up
 
@@ -67,7 +80,7 @@ npm test
 
 ### Packaging
 
-This will create OSX `.app` files in `/dist`.
+This will create OSX `.app` files in `/dist`. This is automatically done by Travis on every new version (ie, new git tags).
 
 ```sh
 npm run dist
