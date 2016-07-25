@@ -28,13 +28,20 @@ name = Their Slack
 url = https://otherteam.slack.com
 ```
 
-## Starting
+## Developer setup
+
+<details>
+<summary>*Show developer instructions...*</summary>
+
+### Starting up
 
 ```sh
 git clone https://github.com/rstacruz/halla.git
 cd halla
 npm install
 ```
+
+### Running
 
 Run it with `npm start`. Note that it'll download nw.js on its first run (pretty big).
 
@@ -48,13 +55,21 @@ Or run it with the SDK (more resource-intensive, but has *Inspect Element*):
 npm run start:sdk
 ```
 
-## Packaging
+### Testing
+
+```sh
+npm test
+```
+
+### Packaging
 
 This will create OSX `.app` files in `/dist`.
 
 ```sh
 npm run dist
 ```
+
+</details>
 
 ## Thanks
 
