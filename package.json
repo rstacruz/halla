@@ -44,17 +44,18 @@
   ],
   "license": "MIT",
   "main": "index.html",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rstacruz/halla.git"
   },
   "scripts": {
-    "dist": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
     "css:watch": "brunch w -j 4",
-    "start": "run-p css:watch nwb",
-    "start:sdk": "run-p css:watch nwb:sdk",
+    "dist": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
     "nwb": "nwb nwbuild -v ${npm_package_config_nwjs_version} ${npm_package_config_nwb_opts} -r .",
     "nwb:sdk": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk ${npm_package_config_nwb_opts} -r .",
+    "start": "run-p css:watch nwb",
+    "start:sdk": "run-p css:watch nwb:sdk",
     "test": "tape test/*.js"
   },
   "window": {
