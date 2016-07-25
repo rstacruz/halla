@@ -9,7 +9,7 @@
   "chromium-args": "--mixed-context --enable-logging=stderr",
   "config": {
     "nwjs_version": "0.16.0",
-    "nwb_opts": "--mac-icns assets/halla.icns"
+    "nwb_opts": "--mac-icns assets/icons/halla.icns --win-ico assets/icons/halla.ico"
   },
   "dependencies": {
     "autoprefixer": "6.3.7",
@@ -51,14 +51,17 @@
   },
   "scripts": {
     "css:watch": "brunch w -j 4",
-    "dist": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
+    "dist": "run-s dist:win dist:osx dist:linux",
+    "dist:win": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p win64 -o dist",
+    "dist:osx": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
+    "dist:linux": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p linux64 -o dist",
     "nwb": "nwb nwbuild -v ${npm_package_config_nwjs_version} ${npm_package_config_nwb_opts} -r .",
     "nwb:sdk": "nwb nwbuild -v ${npm_package_config_nwjs_version}-sdk ${npm_package_config_nwb_opts} -r .",
     "start": "run-p css:watch nwb",
     "start:sdk": "run-p css:watch nwb:sdk",
     "test": "tape test/*.js"
   },
-  "window": {
+  "wdindow": {
     "width": 1024,
     "height": 600,
     "title": "Halla"
