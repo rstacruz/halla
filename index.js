@@ -5,7 +5,8 @@ const h = require('decca').element
 
 const Chrome = require('./lib/components/chrome')
 const FrameDecorator = require('./lib/middleware/frame_decorator')
-const listenForKeys = require('./lib/services/key_listener')
+const KeyListener = require('./lib/services/key_listener')
+const Menubar = require('./lib/services/menubar')
 
 start()
 
@@ -15,7 +16,8 @@ function start () {
 
   // Start services
   startTicker(store)
-  listenForKeys(window, store.dispatch)
+  KeyListener(window, store.dispatch)
+  Menubar(window, store.dispatch)
 
   // Initialize store
   store.dispatch(actions.loadConfig())
