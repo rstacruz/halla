@@ -16,7 +16,7 @@ Halla is yet another "native" app for accessing your Slack teams. It tries to be
 
 ## Config
 
-Create a file called `~/.hallarc`. Add as many Slack teams here, as well as any arbitrary URL.
+Create a file called `~/.hallarc`. You may add as many Slack teams here, as well as any arbitrary URLs.
 
 ```dosini
 [services.myteam]
