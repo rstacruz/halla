@@ -1,0 +1,27 @@
+@import 'iconfonts/stylesheets/ionicons';
+
+/*
+ * Variables
+ */
+
+$accent: dodgerblue;
+
+$ms-base: 14px;
+$ms-ratio: 1.2;
+$ms-fluid: false;
+$ms-range:
+  1.1   20em,
+  1.125 30em,
+  1.15  40em,
+  1.175 50em,
+  1.2   60em;
+
+/*
+ * Modular scale helpers
+ */
+
+@mixin font-size($n) { @include ms-respond(font-size, $n); }
+@mixin padding-top($n) { @include ms-respond(padding-top, $n); }
+@mixin padding-bottom($n) { @include ms-respond(padding-bottom, $n); }
+@mixin margin-top($n) { @include ms-respond(margin-top, $n); }
+@mixin margin-bottom($n) { @include ms-respond(margin-bottom, $n); }

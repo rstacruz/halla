@@ -1,0 +1,50 @@
+@import '../common';
+
+/*
+ * Message
+ */
+
+.message-box {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+}
+
+.message-box > h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.message-box > textarea {
+  margin: 1em -24px;
+  border: solid 1px #eaeaea;
+  border-radius: 2px;
+  padding: 24px;
+  resize: none;
+  width: 100%;
+  font-size: .9em;
+  font-family: menlo, consolas, monospace;
+  line-height: 1.5em;
+  min-height: 5em;
+  background: white;
+  color: #708090;
+
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+.message-box > textarea:focus {
+  border-color: dodgerblue;
+  background: white;
+}
+
+.message-box > p {
+  text-align: center;
+}
+
+.message-box em {
+  color: #708090;
+  font-style: normal;
+}
+

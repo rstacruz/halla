@@ -2,3 +2,5 @@ node_modules
 /hola-osx-x64
 /dist
 /release
+/assets/style.css
+/assets/style.css.map

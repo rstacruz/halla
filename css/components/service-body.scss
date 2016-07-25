@@ -1,0 +1,21 @@
+@import '../common';
+
+/*
+ * Service body
+ */
+
+.service-body {
+  position: absolute;
+  top: -100vh;
+  left: -100vw;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.service-body.-active {
+  top: 0;
+  left: 0;
+  display: block;
+}
+

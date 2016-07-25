@@ -1,0 +1,104 @@
+@import '../common';
+
+/*
+ * Service item:
+ * sidebar thing
+ */
+
+.service-list {
+  padding: 8px 0;
+}
+
+.service-list > .item {
+  margin: 0 auto;
+}
+
+.service-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.service-item > .icon {
+  display: block;
+  position: relative;
+
+  margin: 8px auto;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+
+  font-family: sans-serif;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+}
+
+.service-item > .icon > .name,
+.service-item > .icon > .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service-item > .icon > .name {
+  z-index: 1;
+  background: rgba(255, 255, 255, .1);
+}
+
+.service-item > .icon > .image {
+  border: 0;
+  z-index: 2;
+}
+
+/* Notifications count */
+.service-item > .notif {
+  position: absolute;
+  display: block;
+  z-index: 3;
+
+  bottom: 10px;
+  right: 14px;
+  padding: 0 4px;
+  height: 16px;
+  line-height: 16px;
+
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+
+  border-radius: 3px;
+  background: red;
+}
+
+.service-item > .icon {
+  opacity: .5;
+}
+
+.service-item:hover > .icon,
+.service-item:focus > .icon {
+  opacity: .75;
+}
+
+.service-item.-active > .icon,
+.service-item.-active:hover > .icon,
+.service-item.-active:focus > .icon {
+  opacity: 1;
+  box-shadow: 0 0 3px 1px $accent;
+  pointer-events: none; /* don't make it clickable */
+}
+

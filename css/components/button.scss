@@ -1,0 +1,29 @@
+@import '../common';
+
+/*
+ * Button
+ */
+
+.button {
+  color: $accent;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 100ms linear;
+  border-radius: 2px;
+  display: inline;
+  padding: 6px 12px;
+}
+
+.button:hover,
+.button:focus {
+  color: darken($accent, 10%);
+}
+
+.button:active {
+  color: darken($accent, 20%);
+  background-color: rgba(0, 0, 0, 0.05);
+}

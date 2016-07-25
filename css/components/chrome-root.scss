@@ -1,0 +1,25 @@
+@import '../common';
+
+/*
+ * Chrome root
+ */
+
+.chrome-root {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chrome-root > .sidebar {
+  flex: 0 0 64px;
+  background: #10181d;
+  height: 100%;
+}
+
+.chrome-root > .body {
+  flex: 1 1 100%;
+  height: 100%;
+  position: relative;
+}
+
