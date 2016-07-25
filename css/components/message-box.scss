@@ -39,7 +39,9 @@
 }
 
 .message-box > textarea:focus {
-  box-shadow: 0 0 0 1px $accent;
+  box-shadow:
+    0 0 0 1px rgba($accent, .6),
+    0 0 6px rgba($accent, .3);
   background: white;
 }
 
