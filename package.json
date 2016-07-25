@@ -31,8 +31,6 @@
     "sass-brunch": "2.6.3"
   },
   "devDependencies": {
-    "ava": "0.15.2",
-    "nw-dev": "3.0.0",
     "tape": "4.6.0"
   },
   "directories": {

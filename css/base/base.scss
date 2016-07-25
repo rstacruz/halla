@@ -1,4 +1,8 @@
+@import '../common';
+
 @import 'normalize.css/normalize';
+
+@include ion-font;
 
 html, body, #app {
   margin: 0;
