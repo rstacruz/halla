@@ -1,6 +1,6 @@
 # Halla
 
-> Minimal Slack wrapper app
+> Native Slack wrapper app without the bloat
 
 ![](docs/images/screenshot.png)
 
@@ -16,7 +16,7 @@ Halla is yet another "native" app for accessing your Slack teams. It tries to be
 
 ## Config
 
-Create a file called `~/.hallarc`. Add as many Slack teams here.
+Create a file called `~/.hallarc`. Add as many Slack teams here, as well as any arbitrary URL.
 
 ```dosini
 [services.myteam]
@@ -26,6 +26,10 @@ url = https://myteam.slack.com
 [services.otherteam]
 name = Their Slack
 url = https://otherteam.slack.com
+
+[services.facebook]
+name = Messenger
+url = https://messenger.com
 ```
 
 ## Developer setup
