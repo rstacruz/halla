@@ -71,5 +71,9 @@
     "width": 1024,
     "height": 600,
     "title": "Halla"
+  },
+  "nwjsBuilder": {
+    "productName": "Halla",
+    "bundleIdentifier": "com.ricostacruz.halla"
   }
 }
