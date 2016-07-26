@@ -1,7 +1,7 @@
 {
   "name": "Halla",
   "description": "Native Slack wrapper app without the bloat",
-  "version": "0.5.3-pre5",
+  "version": "0.5.3",
   "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
   "bugs": {
     "url": "https://github.com/rstacruz/halla/issues"
@@ -37,6 +37,11 @@
     "doc": "docs",
     "test": "test"
   },
+  "files": [
+    "assets",
+    "index.html",
+    "index.js"
+  ],
   "homepage": "https://github.com/rstacruz/halla#readme",
   "keywords": [
     "slack",
