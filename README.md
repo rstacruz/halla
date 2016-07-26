@@ -88,6 +88,13 @@ npm run dist
 
 </details>
 
+## Alternatives
+
+Here are some more feature-rich alternatives to Halla:
+
+- [Franz](http://www.meetfranz.com/)
+- [Rambox](http://rambox.pro/)
+
 ## Thanks
 
 **halla** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
