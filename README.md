@@ -32,6 +32,8 @@ name = Messenger
 url = https://messenger.com
 ```
 
+You may add any URL (!), but only certain sites get extra features (eg, Slack team icons and badge notifications).
+
 ## Developer setup
 
 <details>
@@ -87,6 +89,15 @@ npm run dist
 ```
 
 </details>
+
+## Limitations
+
+Most everything you expect will work, except for a few things:
+
+- Sound
+- Native notifications (they'll use Rich Chrome Notifications instead)
+- Flash (ie, Spotify/Soundcloud won't work)
+- Skype plugin (Skype works, but no calls)
 
 ## Alternatives
 
