@@ -20,7 +20,7 @@ deploy:
     secure: "SsqpX59iO2N2pYX/2w0oAF8zlGiXy55MPTRwEKUIgVwjidt97gNJvd8sAt8dFkr6uDgOhCyiotdwsQK7LJvXUKr0jF3k9xziHtSmamOCIZprZLTXnmxJVb3LRoGWx4lgFToVSArB0LrAF4HdPBess5sB5K1GusdP70mpiJEotd99xeWuSFDSDoEKICcWPG3FTT4n4T1FpzyIMGAmsnzzwq3StGCYRbYTKskex61TlcF8ZrWEn9iU8AJM1Fl2rVT124bkDlguMi1BfrPWdjJa135y2pH5x1PAyGQ4SeD+6yO6V0gZbbwnPfFPilk3i6GAqRJ2NuFzBEUWuCAxQaz4AZB3a2O1MHJHz65NbbrGUP5gRH227AsLOABSWnJzgeRB/bUvcl7cP3NqUrtXplRAVml8SZgUUtIiQcsJrWMZeQbWN4wD4tbMll3bT0ESXhCLDHe1Esa8e8GhXIlH5rbg2SWv3/exVH1gChDCsBvUEdggKK49P4niqZd+X1mAU6QF93YTao9orrmW3I3fF5L4bBiyAkSDk647XhxN2KV/3iNpTLkPGbIDvqd4COKqnhOfb8e+4dtzoXMzBMWRsqbkhAzn3ugmhsOQYkgT8Tb2z0BxPykKD1s2y1klhADKcni/0DTePJ0BiJU9/ngyC5BZ7GXL51inSWt4aB+Zg7rtgxY="
   file:
     - release/halla-osx.zip
-    - release/halla-win.zip
+    # - release/halla-win.zip
     # - release/halla-linux.tar.gz
   skip_cleanup: true
   on:
