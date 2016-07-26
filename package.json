@@ -51,7 +51,7 @@
   },
   "scripts": {
     "css:watch": "brunch w -j 4",
-    "css:build": "brunch b -j 4",
+    "css:build": "brunch b -j 4 --production",
     "dist": "run-s css:build dist:win dist:osx",
     "dist:win": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p win64 -o dist",
     "dist:osx": "nwb nwbuild -v $npm_package_config_nwjs_version ${npm_package_config_nwb_opts} -p osx64 -o dist",
