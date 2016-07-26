@@ -17,10 +17,10 @@ echo "Building halla-win.zip..."
 zip -9rq ../../release/halla-win.zip *
 cd -
 
-cd dist/Halla-linux-x64
-echo "Building halla-linux.tar.gz..."
-tar cf ../../release/halla-linux.tar.gz *
-cd -
+# cd dist/Halla-linux-x64
+# echo "Building halla-linux.tar.gz..."
+# tar cf ../../release/halla-linux.tar.gz *
+# cd -
 
 echo ""
 find release

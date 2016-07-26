@@ -19,7 +19,7 @@ deploy:
   file:
     - release/halla-osx.zip
     - release/halla-win.zip
-    - release/halla-linux.tar.gz
+    # - release/halla-linux.tar.gz
   skip_cleanup: true
   on:
     tags: true
