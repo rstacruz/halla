@@ -11,7 +11,7 @@ before_deploy:
   - sudo apt-get install xvfb -y
   - sudo apt-get install wine -y
   - npm run dist
-  - Xvfb :0 -ac
+  - Xvfb :0 -ac &
   - ./support/build_release
 
 deploy:
