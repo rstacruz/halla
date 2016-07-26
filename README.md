@@ -94,6 +94,7 @@ npm run dist
 
 Most everything you expect will work, except for a few things:
 
+- Slack sounds (help me find out why!)
 - Native notifications (they'll use Rich Chrome Notifications instead)
 - Flash (ie, Spotify/Soundcloud won't work)
 - Skype plugin (Skype works, but no calls)
