@@ -7,6 +7,7 @@ const Chrome = require('./lib/components/chrome')
 const FrameDecorator = require('./lib/middleware/frame_decorator')
 const KeyListener = require('./lib/services/key_listener')
 const Menubar = require('./lib/services/menubar')
+const WindowState = require('./lib/services/window_state')
 
 start()
 
@@ -18,6 +19,7 @@ function start () {
   startTicker(store)
   KeyListener(window, store.dispatch)
   Menubar(window, store.dispatch)
+  WindowDimensions(window, store.dispatch)
 
   // Initialize store
   store.dispatch(actions.loadConfig())
