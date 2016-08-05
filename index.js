@@ -19,7 +19,7 @@ function start () {
   startTicker(store)
   KeyListener(window, store.dispatch)
   Menubar(window, store.dispatch)
-  WindowDimensions(window, store.dispatch)
+  WindowState(window, store.dispatch)
 
   // Initialize store
   store.dispatch(actions.loadConfig())
