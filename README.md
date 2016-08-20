@@ -14,6 +14,15 @@ Halla is yet another "native" app for accessing your Slack teams. It tries to be
 [Electron]: http://electron.atom.io/
 [MacGap]: https://macgapproject.github.io/
 
+## Installation
+You can download the latest release **[here →](https://github.com/rstacruz/halla/releases)**
+
+If you're on macOS, you can also use [Homebrew Cask](https://caskroom.github.io/) to download the app by running these commands:
+```bash
+$ brew cask update
+$ brew cask install halla
+```
+
 ## Config
 
 Create a file called `~/.hallarc`. You may add as many Slack teams here, as well as any arbitrary URLs.
